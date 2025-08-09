@@ -102,37 +102,26 @@ int main () {
         printf("\n\t\tInvalid!\n");
     }
 
-    average = 50.0 + score * 10.0;
+    average = ((float)score /5) * 50 + 50;
 
-    if (score >= 5) {
-        printf("\n\t\t%s Your Score is %d", name, score);
-        printf("\n\t\tYour average is \t%.2f", average);
+    printf("\n\t\t%s Your Score is %d", name, score);
+    printf("\n\t\tYour average is %.2f", average);
+    
+    if (average >= 91 && average <= 100) {
         printf("\n\n\t\tExcellent");
-        printf("\n\n\t\tQuiz v3");
-    } else if (score >= 4) {
-        printf("\n\t\t%s Your Score is %d", name, score);
-        printf("\n\t\tYour average is \t%.2f", average);
+    } else if (average >= 81 && average <= 90) {
         printf("\n\n\t\tSatisfactory");
-        printf("\n\n\t\tQuiz v3");
-    } else if (score >= 3) {
-        printf("\n\t\t%s Your Score is %d", name, score);
-        printf("\n\t\tYour average is \t%.2f", average);
+    } else if (average >= 71 && average <= 80) {
         printf("\n\n\t\tVery Good");
-        printf("\n\n\t\tQuiz v3");
-    } else if (score >= 2) {
-        printf("\n\t\t%s Your Score is %d", name, score);
-        printf("\n\t\tYour average is \t%.2f", average);
+    } else if (average >= 61 && average <= 70) {
         printf("\n\n\t\tGood");
-        printf("\n\n\t\tQuiz v3");
-    } else if (score >= 1) {
-        printf("\n\t\t%s Your Score is %d", name, score);
-        printf("\n\t\tYour average is \t%.2f", average);
+    } else if (average >= 51 && average <= 60) {
         printf("\n\n\t\tFair");
-        printf("\n\n\t\tQuiz v3");
     } else {
-        printf("\n\t\t%s Your Score is %d", name, score);
-        printf("\n\t\tYour average is \t%.2f", average);
         printf("\n\n\t\tFailed");
-        printf("\n\n\t\tQuiz v3");
     }
+
+    printf("\n\n\t\tQuiz v3");
+
+    return 0;
 }
